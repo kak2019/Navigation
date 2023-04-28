@@ -1,0 +1,29 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/spfx-serve.schema.json",
+  "port": 4321,
+  "https": true,
+  "serveConfigurations": {
+    "default": {
+      "pageUrl": "https://udtrucks.sharepoint.com/sites/ExtensionsTEST",
+      "customActions": {
+        "72272ccb-0fcb-4f29-8fdc-580d498a9ffe": {
+          "location": "ClientSideExtension.ApplicationCustomizer",
+          "properties": {
+            "testMessage": "Test message"
+          }
+        }
+      }
+    },
+    "helloWorld": {
+      "pageUrl": "https://udtrucks.sharepoint.com/sites/ExtensionsTEST",
+      "customActions": {
+        "72272ccb-0fcb-4f29-8fdc-580d498a9ffe": {
+          "location": "ClientSideExtension.ApplicationCustomizer",
+          "properties": {
+            "testMessage": "Test message"
+          }
+        }
+      }
+    }
+  }
+}

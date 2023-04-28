@@ -1,0 +1,17 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "version": "1.15.2",
+    "libraryName": "dpnav",
+    "libraryId": "59fa55d6-e73a-468c-a93d-96cd8e00e960",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "DPNAV",
+    "solutionShortDescription": "DPNAV description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "extension",
+    "extensionType": "ApplicationCustomizer"
+  }
+}
