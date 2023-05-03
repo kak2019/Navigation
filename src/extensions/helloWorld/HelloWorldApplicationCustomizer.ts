@@ -53,32 +53,32 @@ export default class HelloWorldApplicationCustomizer extends BaseApplicationCust
       <div class="t-head-menu__inner">
         <ul class="t-menu">
           <li class="t-menu__item t-menu__item--plain">
-            <span class="t-menu__content t-menu__content-active"><a className="t-menu__link" id="Home" href="https://udtrucks.sharepoint.com/sites/ExtensionsTEST">Home</a></span>
+            <span class="t-menu__content t-menu__content-active"><a class="t-menu__link" id="Home" href="https://udtrucks.sharepoint.com/sites/ExtensionsTEST">Home</a></span>
           </li>
           <li class="t-menu__item t-menu__item--plain">
-            <span class="t-menu__content"><a className="t-menu__link" id="Delivery" href="https://udtrucks.sharepoint.com/sites/ExtensionsTEST/SitePages/Delivery.aspx">Delivery Practice & Framework</a></span>
+            <span class="t-menu__content"><a class="t-menu__link" id="Delivery" href="https://udtrucks.sharepoint.com/sites/ExtensionsTEST/SitePages/Delivery.aspx">Delivery Practice & Framework</a></span>
           </li>
           <li class="t-menu__item t-menu__item--plain">
-            <span class="t-menu__content"><a className="t-menu__link" id="Integration" href="https://udtrucks.sharepoint.com/sites/ExtensionsTEST/SitePages/Integration.aspx">Integration & Architecture</a></span>
+            <span class="t-menu__content"><a class="t-menu__link" id="Integration" href="https://udtrucks.sharepoint.com/sites/ExtensionsTEST/SitePages/Integration.aspx">Integration & Architecture</a></span>
           </li>
           <li class="t-menu__item t-menu__item--plain">
-            <span class="t-menu__content"> <a className="t-menu__link" id="UX" href="https://udtrucks.sharepoint.com/sites/ExtensionsTEST/SitePages/UX.aspx">UX</a></span>
+            <span class="t-menu__content"> <a class="t-menu__link" id="UX" href="https://udtrucks.sharepoint.com/sites/ExtensionsTEST/SitePages/UX.aspx">UX</a></span>
           </li>
           <li class="t-menu__item t-menu__item--plain">
-            <span class="t-menu__content"><a className="t-menu__link" id="AI" href="https://udtrucks.sharepoint.com/sites/ExtensionsTEST/SitePages/AI.aspx">AI</a></span>
+            <span class="t-menu__content"><a class="t-menu__link" id="AI" href="https://udtrucks.sharepoint.com/sites/ExtensionsTEST/SitePages/AI.aspx">AI</a></span>
           </li>
           <li class="t-menu__item t-menu__item--plain"><span class="t-menu__content">
-            <a className="t-menu__link" id="RPA" href="https://udtrucks.sharepoint.com/sites/ExtensionsTEST/SitePages/RPA.aspx">RPA</a></span>
+            <a class="t-menu__link" id="RPA" href="https://udtrucks.sharepoint.com/sites/ExtensionsTEST/SitePages/RPA.aspx">RPA</a></span>
           </li>
           <li class="t-menu__item t-menu__item--plain"><span class="t-menu__content">
-            <a className="t-menu__link" id="DocumentManagement" href="https://udtrucks.sharepoint.com/sites/ExtensionsTEST/SitePages/DocumentManagement.aspx">Document Management</a></span>
+            <a class="t-menu__link" id="DocumentManagement" href="https://udtrucks.sharepoint.com/sites/ExtensionsTEST/SitePages/DocumentManagement.aspx">Document Management</a></span>
           </li>
 
           <li class="t-menu__item t-menu__item--plain"><span class="t-menu__content">
-            <a className="t-menu__link" id="DocumentManagement" href="">Low code and Mobile</a></span>
+            <a class="t-menu__link" id="DocumentManagement" href="#">Low code and Mobile</a></span>
           </li> 
           <li class="t-menu__item t-menu__item--plain"><span class="t-menu__content">
-            <a className="t-menu__link" id="DocumentManagement" href="">Community</a></span>
+            <a class="t-menu__link" id="DocumentManagement" href="#">Community</a></span>
           </li> 
       </ul>
       </div>
