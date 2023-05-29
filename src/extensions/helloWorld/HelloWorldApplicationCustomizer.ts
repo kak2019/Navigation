@@ -82,6 +82,7 @@ export default class HelloWorldApplicationCustomizer extends BaseApplicationCust
       );
 
       const checkActive = () => {
+  
         const hideTextArea: any = document.getElementsByClassName('p_e_819bc2b6 q_e_819bc2b6');
         for (let index = 0; index < hideTextArea.length; index++) {
           hideTextArea[index].style.display = 'none'
