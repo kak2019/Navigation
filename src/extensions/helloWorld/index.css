@@ -29,6 +29,7 @@
   width: 100%;
 }
 .t-menu a {
+  text-align:center;
   margin-top: -2px;
   color: #fff;
   font-size: 15px;
@@ -43,6 +44,6 @@
 }
 .t-menu .t-menu__content-active,
 .t-menu a:hover {
-  border-top: 2px solid #00afd0;
+  border-top: 3px solid #00afd0;
   color: #00afd0;
 }

@@ -23,9 +23,9 @@ export default class HelloWorldApplicationCustomizer extends BaseApplicationCust
     Log.info(LOG_SOURCE, `Initialized ${strings.Title}`);
     const head: any =
       document.getElementsByTagName('body')[0] || document.documentElement;
+
     const head1: any =
       document.getElementById('spSiteHeader') || document.documentElement;
-
     // let articleRedirectScriptTag: HTMLScriptElement =
     //   document.createElement('script');
     // let jsurl = `${this.context.pageContext.web.serverRelativeUrl}/Shared%20Documents/App.js`;
@@ -40,7 +40,7 @@ export default class HelloWorldApplicationCustomizer extends BaseApplicationCust
       <div class="t-head-menu__inner">
         <ul class="t-menu">
           <li class="t-menu__item t-menu__item--plain">
-           <a class="t-menu__link" id="Home" href="https://udtrucks.sharepoint.com/sites/ExtensionsTEST">Home</a>
+           <a class="t-menu__link" id="Home" href="https://udtrucks.sharepoint.com/sites/ExtensionsTEST/SitePages/Home.aspx">Home</a>
           </li>
           <li class="t-menu__item t-menu__item--plain">
            <a class="t-menu__link" id="Delivery" href="https://udtrucks.sharepoint.com/sites/ExtensionsTEST/SitePages/Delivery.aspx">Delivery Practice & Framework</a>
@@ -49,21 +49,20 @@ export default class HelloWorldApplicationCustomizer extends BaseApplicationCust
            <a class="t-menu__link" id="Integration" href="https://udtrucks.sharepoint.com/sites/ExtensionsTEST/SitePages/Integration.aspx">Integration & Architecture</a>
           </li>
           <li class="t-menu__item t-menu__item--plain">
-            <a class="t-menu__link" id="UX" href="https://udtrucks.sharepoint.com/sites/ExtensionsTEST/SitePages/UX.aspx">UX</a>
-          </li>
+          <a class="t-menu__link" id="DocumentManagement" href="https://udtrucks.sharepoint.com/sites/ExtensionsTEST/SitePages/LowcodeandMobile.aspx">Low code and Mobile</a>
+         </li> 
+         
           <li class="t-menu__item t-menu__item--plain">
            <a class="t-menu__link" id="AI" href="https://udtrucks.sharepoint.com/sites/ExtensionsTEST/SitePages/AI.aspx">AI</a>
           </li>
           <li class="t-menu__item t-menu__item--plain">
            <a class="t-menu__link" id="RPA" href="https://udtrucks.sharepoint.com/sites/ExtensionsTEST/SitePages/RPA.aspx">RPA</a>
           </li>
+          
           <li class="t-menu__item t-menu__item--plain">
-           <a class="t-menu__link" id="DocumentManagement" href="https://udtrucks.sharepoint.com/sites/ExtensionsTEST/SitePages/DocumentManagement.aspx">Document Management</a>
-          </li>
-
-          <li class="t-menu__item t-menu__item--plain">
-           <a class="t-menu__link" id="DocumentManagement" href="https://udtrucks.sharepoint.com/sites/ExtensionsTEST/SitePages/LowcodeandMobile.aspx">Low code and Mobile</a>
-          </li> 
+          <a class="t-menu__link" id="UX" href="https://udtrucks.sharepoint.com/sites/ExtensionsTEST/SitePages/UX.aspx">UX</a>
+        </li>
+         
           <li class="t-menu__item t-menu__item--plain">
            <a class="t-menu__link" id="DocumentManagement" href="https://udtrucks.sharepoint.com/sites/ExtensionsTEST/SitePages/Community.aspx">Community</a>
           </li> 
@@ -83,6 +82,10 @@ export default class HelloWorldApplicationCustomizer extends BaseApplicationCust
       );
 
       const checkActive = () => {
+        const hideTextArea: any = document.getElementsByClassName('p_e_819bc2b6 q_e_819bc2b6');
+        for (let index = 0; index < hideTextArea.length; index++) {
+          hideTextArea[index].style.display = 'none'
+        }
         const pathname = window.location.href.split('?')[0];
         const links = document.querySelectorAll('.t-menu__link');
         links.forEach((link: any) => {
@@ -103,6 +106,10 @@ export default class HelloWorldApplicationCustomizer extends BaseApplicationCust
       });
       (window as any).addHistoryListener('popstate', () => {
         console.log('goback');
+        checkActive();
+      });
+      (window as any).addHistoryListener('locationchange', () => {
+        console.log('locationchange');
         checkActive();
       });
     }
