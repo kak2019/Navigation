@@ -16,6 +16,14 @@ export interface IHelloWorldApplicationCustomizerProperties {
   testMessage: string;
 }
 
+function addCSS(cssText: string) {
+  const style = document.createElement('style');
+  const head = document.head || document.getElementsByTagName('head')[0];
+  const textNode = document.createTextNode(cssText);
+  style.appendChild(textNode);
+  head.appendChild(style);
+}
+
 /** A Custom Action which can be run during execution of a Client Side Application */
 export default class HelloWorldApplicationCustomizer extends BaseApplicationCustomizer<IHelloWorldApplicationCustomizerProperties> {
   public onInit(): Promise<void> {
@@ -71,6 +79,7 @@ export default class HelloWorldApplicationCustomizer extends BaseApplicationCust
     </div>`;
 
     if (root) {
+      //
     } else {
       head1.insertAdjacentHTML(
         'afterend',
@@ -78,15 +87,14 @@ export default class HelloWorldApplicationCustomizer extends BaseApplicationCust
         <div id="root">
           ${innerHTML}
         </div>
-      `
+      `,
       );
 
       const checkActive = () => {
-  
-        const hideTextArea: any = document.getElementsByClassName('p_e_819bc2b6 q_e_819bc2b6');
-        for (let index = 0; index < hideTextArea.length; index++) {
-          hideTextArea[index].style.display = 'none'
-        }
+        // const hideTextArea: any = document.getElementsByClassName('p_e_819bc2b6 q_e_819bc2b6');
+        // for (let index = 0; index < hideTextArea.length; index++) {
+        //   hideTextArea[index].style.display = 'none'
+        // }
         const pathname = window.location.href.split('?')[0];
         const links = document.querySelectorAll('.t-menu__link');
         links.forEach((link: any) => {
@@ -110,9 +118,11 @@ export default class HelloWorldApplicationCustomizer extends BaseApplicationCust
         checkActive();
       });
       (window as any).addHistoryListener('locationchange', () => {
-        console.log('locationchange');
         checkActive();
       });
+      window.addEventListener("popstate", function(e) {
+        checkActive();
+    }, false);
     }
 
     // let cssUrl = '/sites/ExtensionsTEST/Shared%20Documents/index.css';
